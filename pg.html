@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author">
+        <meta content="dark light" name="color-scheme">
+        <title>DungeonKit - Personaggio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stylepg.css">
+    </head>
+
+    <body>
+        <header>
+            <img class="headerimg" src="images/logo.PNG">
+        </header>
+        <nav>
+            <a href="index.html">
+                <img class="icon" src="images/nav/home.PNG">HOME</a>
+            <a class="active">
+                <img class="icon" src="images/nav/pgactive.PNG">PERSONAGGIO</a>
+            <a href="dm.html">
+                <img class="icon" src="images/nav/dm.PNG">DUNGEON MASTER</a>
+            <div class="dropdown">
+                <button id="dropbtn" onclick="toggleDropdown()" class="dropbtn">
+                    <img class="icon" src="images/nav/dice.PNG">Dadi</button>
+                <div id="diceDropdown" class="dropdown-content">
+                    <button class="buttonclick" onclick="rollDice(6, 'd6')" id="d6">D6</button>
+                    <button class="buttonclick" onclick="rollDice(8, 'd8')" id="d8">D8</button>
+                    <button class="buttonclick" onclick="rollDice(10, 'd10')" id="d10">D10</button>
+                    <button class="buttonclick" onclick="rollDice(12, 'd12')" id="d12">D12</button>
+                    <button class="buttonclick" onclick="rollDice(20, 'd20')" id="d20">D20</button>
+                </div>
+            </div>
+        </nav>
+        <div class="pg">
+            <div class="bottoneclassi" onclick="openModal()">
+                <h1>CLASSI</h1>
+            </div>
+
+            <div id ="layer" class="hidden" onclick="openModal()"></div>
+
+            <div id="modal" class="hidden" onclick="openModal()">
+                <h1>CLASSI</h1>
+                <a class="classe" href="ladro.html"><img src="images/classimg/ladro.PNG" title="Ladro"></a>
+                <a class="classe" href="guerriero.html"><img src="images/classimg/guerriero.PNG" title="Guerriero"></a>
+                <a class="classe" href="druido.html"><img src="images/classimg/druido.PNG" title="Druido"></a>
+                <a class="classe" href="chierico.html"><img src="images/classimg/chierico.PNG" title="Chierico"></a>
+                <a class="classe" href="bardo.html"><img src="images/classimg/bardo.PNG" title="Bardo"></a>
+                <a class="classe" href="barbaro.html"><img src="images/classimg/barbaro.PNG" title="Barbaro"></a>
+                <a class="classe" href="warlock.html"><img src="images/classimg/warlock.PNG" title="Warlock"></a>
+                <a class="classe" href="stregone.html"><img src="images/classimg/stregone.PNG" title="Stregone"></a>
+                <a class="classe" href="ranger.html"><img src="images/classimg/ranger.PNG" title="Ranger"></a>
+                <a class="classe" href="paladino.html"><img src="images/classimg/paladino.PNG" title="Paladino"></a>
+                <a class="classe" href="monaco.html"><img src="images/classimg/monaco.PNG" title="Monaco"></a>
+                <a class="classe" href="mago.html"><img src="images/classimg/mago.PNG" title="Mago"></a>
+            </div>
+        </div>
+        <footer><p>Made By Stefano Massa</p></footer>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
